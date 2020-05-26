@@ -22,8 +22,8 @@ Route::get('Jobs', "PostController@index");
 //list one Job
 Route::get('Job/{id}','PostController@show');
 //Create post 
-Route::post('Job','PostController@store');
+Route::post('create/Job','PostController@store');
 //Update/Edit
-Route::put('Job','PostController@store');
+Route::put('create/Job','PostController@store');
 //Delete Article
 Route::delete('Job/{id}','PostController@destroy');

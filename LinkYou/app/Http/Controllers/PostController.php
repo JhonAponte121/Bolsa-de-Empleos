@@ -20,7 +20,7 @@ class PostController extends Controller
 
     public function store(Request $request)
     {
-        $post = $request->isMethod('put') ? create_post_table::findOrFail($request->create_post_tables_id) : new Post;
+        $post = $request->isMethod('put') ? create_post_table::findOrFail($request->create_post_tables_id) : new create_post_table;
        
         $post->id =$request->input('create_post_tables_id');
         $post->company =$request->input('company');
@@ -43,7 +43,7 @@ class PostController extends Controller
     public function index()
     {
         //get jobs
-        $jobs=create_post_table::orderBy('created_at', 'ASC')->where('isActive','1')->paginate(10);
+        $jobs=create_post_table::orderBy('created_at', 'ASC')->paginate(10);
         return Post::collection($jobs);
     }
     public function show($id)
