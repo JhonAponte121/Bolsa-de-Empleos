@@ -1,19 +1,21 @@
+#divTable{
+  margin-top: 20px;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
 #div5{
   position: absolute;
-  left: 80%;
-  bottom: 8%;
-  margin: 3%;
-  right: 40%;
-  width: 10%;
- 
+  
+  right: 20px;
+  bottom: 3%;
+  margin-top: 20px;
 }
+
 #div6{
-  height: 40%;
- bottom: 15%;
- width: 90%;
-  position: absolute;
-  margin: 3%;
-  height: 50%;
+  margin-top: 20px;
+  margin-left: 3%;
+  margin-right: 3%;
 
 }
 #div2{
@@ -38,39 +40,21 @@
   right: 40%;
   width: 10%;
 }
-#div10{
-  position: absolute;
-  left: 80%;
-  bottom: 8%;
-  margin: 3%;
-  right: 40%;
-  width: 10%;
- 
-}
+
+
 #div9{
-  height: 40%;
- bottom: 15%;
+  
  width: 90%;
-  position: absolute;
+  position: relative;
   margin: 3%;
-  height: 50%;
+ bottom: 40%;
 
 }
 #div7{
-
-  margin: 3%;
-  height: 10%;
-  width: 40%;
-  top: 0;
+  display: inline-block;
 }
-#div8{
-  position: absolute;
-  left: 42%;
-  margin: 3%;
-  top: 10%;
 
-
-}#post1{
+#post1{
   position: absolute;
   left: 80%;
   bottom: 75%;
@@ -105,6 +89,7 @@
 #div113{
   margin: 4%;
 }
+
 #div112{
   position: absolute;
   margin: 4%;

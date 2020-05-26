@@ -3,93 +3,49 @@
 @section('content')
 
 <!-- Div App relacionado con el archivo js -->
-<div id="app_ShowJobs">
+<div id="app_AdminJobs">
     <div id="componente1">
       <!-- Componente que es donde esta el Nav-->
     </div> 
      <!-- Buscador-->
-      <div id="div2"> 
-        <!-- Input Buscador-->
-       <el-input placeholder="Buscar un trabajo" prefix-icon="el-icon-search" id="search" name="search"  v-model="buscador">
-     </el-input> 
-      </div>
-              <!-- Button Buscar -->
-     <div id="div3"> 
-      <el-button type="primary" icon="el-icon-search" circle></el-button>
-     </div>
-         <!-- Buttom Ver mas-->
-        
-        
-       
-        <div id="post"> 
-          <el-button type="primary"  name="postear"  id="postear" round >Post a Job<i class="el-icon-edit"></i></el-button>
-        </div>
+    
+        <el-form>
+      <el-form-item>
+        <el-col :span="10" style="margin-left: 3%">
+          <el-input placeholder="Buscar un trabajo" prefix-icon="el-icon-search" id="search" name="search"  v-model="buscador"></el-input> 
+        </el-col>
+        <el-col :span="6" style="margin-left: 2%">
+          <el-button type="primary" icon="el-icon-search"></el-button>
+        </el-col>
+        <el-col :span="3" style="margin-left: 2%; position: absolute; right: 10px">
+          <el-button type="primary" icon="el-icon-edit">Crear empleo</el-button>        
+       </el-col>
+      </el-form-item>
+    </el-form>
         
         
       
        <!-- Tabla -->
     <div id="div6">
-        <template>
-      <el-table
-        :data="tableData"
-        style="width: 100%"
-        max-height="250">
-        <el-table-column
-          fixed
-          prop="date"
-          label="Fecha"
-          width="150">
-        </el-table-column>
-        <el-table-column
-          prop="name"
-          label="Nombre"
-          width="120">
-        </el-table-column>
-        <el-table-column
-          prop="state"
-          label="Estado"
-          width="120">
-        </el-table-column>
-        <el-table-column
-          prop="city"
-          label="Ciudad"
-          width="120">
-        </el-table-column>
-        <el-table-column
-          prop="address"
-          label="Dirección"
-          width="300">
-        </el-table-column>
-        <el-table-column
-          prop="zip"
-          label="Código postal"
-          width="120">
-        </el-table-column>
-        <el-table-column
-          fixed="right"
-          label="Operaciones"
-          width="120">
-          <template slot-scope="scope">
-            <el-button
+    <table class="table table-striped">
+  <thead class="thead-primary">
+    <tr >
+      <th scope="col">Compañia</th>
+      <th scope="col">Posicion</th>
+      <th scope="col">Ubicacion</th>
+      <th scope="col">Acciones</th>
     
-              type="text"
-              size="small">
-            Editar
-            </el-button>
-            <el-button
-            @click.native.prevent="deleteRow(scope.$index, tableData)"
-            type="text"
-            size="small">
-            Eliminar
-          </el-button>
-          </template>
-        </el-table-column>
-      </el-table>
-    </template>
+    </tr>
+  </thead>
+  <tbody id="tbodyadmin">
+  <tr id="tradmin"></tr>
+    
+  </tbody>
+</table>
+
     </div>
-    <div id="div5">
-      <el-button  type="primary"  name="vermas"   id="vermas" 
-        round  >Ver Mas<i class="el-icon-view"></i></el-button> 
+    <div style="text-align: center">
+      <el-button  type="primary"  name="vermas"   id="vermas"  style="margin: auto; text-align: center">Mostrar Mas<i class="el-icon-view"></i></el-button> 
     </div>
     
          <!-- Buttom de Post a Job-->

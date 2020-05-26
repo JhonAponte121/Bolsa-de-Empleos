@@ -37,4 +37,5 @@
 <script src="Component.js"></script>
 <script src="https://unpkg.com/element-ui/lib/index.js"></script>
 <script type="text/javascript" src="{{ URL::asset('js/ViewJob.js') }}"></script>
+<script type="text/javascript" src="{{ URL::asset('js/Admin.js') }}"></script>
 </html>
